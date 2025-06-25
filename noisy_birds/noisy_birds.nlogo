@@ -388,3 +388,23 @@ Line -7500403 true 150 150 210 180
 @#$#@#$#@
 0
 @#$#@#$#@
+breed [ humans human ]
+breed [ birds  bird  ]
+
+to setup
+
+clear-all
+ask patches [ set pcolor grey ]
+set-default-shape birds "circle"
+set-default-shape humans  "person"
+create-birds initial-number-bird [
+set color white
+setxy random-xcor random-ycor
+]
+create-humans initial-number-human [
+set color white
+setxy random-xcor random-ycor
+]
+reset-ticks
+
+end
